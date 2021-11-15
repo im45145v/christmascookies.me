@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="&lt;blockquote&gt;&lt;strong&gt;Магазин почтовых аккаунтов&lt;/strong&gt;&lt;/blockquote&gt;">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://hstock.org/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://hstock.org/css/simple-line-icons.css">
+    <link rel="stylesheet" href="https://hstock.org/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://hstock.org/css/fonts.css">
+    <link rel="stylesheet" href="https://hstock.org/css/slick.css">
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon.png">
+
+    <link rel="mask-icon" href="/favicon.png">
+    <!-- Styles -->
+    <link href="/css/app.css?id=3baeb0a61d384bf121a2" rel="stylesheet">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="xD2GWBrbMUqjJpOIg6NB6bZOwxlVjO1ZMmVrHywD">
+            <title>Магазин AccStore на hStock</title>
+        <meta name="google-site-verification" content="eloIt_rRl9mXagKIyTNFZEUkyhNYR-Lz0izi1Ze5LDU"/>
+    <meta name="enot" content="8021625821284mHCYZi6pIHfHhDlmaCh0JZKL5DFSRZQj" />
+        <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(56381029, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157303583-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157303583-1');
+    </script>
+
+</head>
+<body>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/56381029" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<div class="content" id="app">
+    <nav id="mobileMenu" :class="{'show-mobile': showedMobileMenu}" v-if="isMobile">
+        <header>
+            <div class="mobile-header-wrapper">
+                                                    <div class="mobile-header-user">
+                        <div class="mh-user-column">
+                            <a href="/profile">
+                                <img src="/images/icon_menu/mobile/user.svg" alt="">
+                                <span>ashish malla</span>
+                            </a>
+                        </div>
+                                                    <div class="mh-user-column">
+                                <a href="/profile/store">
+                                    <img src="/images/icon_menu/mobile/store.svg" alt="">
+                                    <span>TECHSKULL</span>
+                                </a>
+                            </div>
+                                            </div>
+                            </div>
+        </header>
+        <div class="mobile-main">
+            <div class="mobile-main-category">
+                <div class="category-header">
+                    <h3>Категории</h3>
+                </div>
+                <nav>
+                    <ul class="menu-category">
+                                            </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="footer-columns">
+                    <div class="column">
+                        <div class="column-header" :class="{opened: isOpennedFooter('1')}" @click="toggleOpenFooter('1')">
+                            Покупателям
+                            <span class="mobile-show-footer-title"><img src="/images/footer-show-title.svg" alt=""></span>
+                            <span class="mobile-hide-footer-title"><img src="/images/footer-hide-title.svg" alt=""></span>
+                        </div>
+                        <div class="column-body">
+                            <ul>
+                                <li><a href="/kak-vybrat-tovar">Как выбрать товар</a></li>
+                                <li><a href="/kak-vybrat-tovar">Помощь по сервису</a></li>
+                                <li><a href="/faq/customer">F.A.Q</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="column-header" :class="{opened: isOpennedFooter('2')}" @click="toggleOpenFooter('2')">
+                            Продавцам
+                            <span class="mobile-show-footer-title"><img src="/images/footer-show-title.svg" alt=""></span>
+                            <span class="mobile-hide-footer-title"><img src="/images/footer-hide-title.svg" alt=""></span>
+                        </div>
+                        <div class="column-body">
+                            <ul>
+                                <li><a href="/prodavcam">Заработай на своих товарах</a></li>
+                                <li><a href="/request_store_add">Подключение магазина</a></li>
+                                <li><a href="/pomoshch-dlya-magazina">Помощь по магазину</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="column-header" :class="{opened: isOpennedFooter('3')}" @click="toggleOpenFooter('3')">
+                            О проекте
+                            <span class="mobile-show-footer-title"><img src="/images/footer-show-title.svg" alt=""></span>
+                            <span class="mobile-hide-footer-title"><img src="/images/footer-hide-title.svg" alt=""></span>
+                        </div>
+                        <div class="column-body">
+                            <ul>
+                                <li><a href="/o-proekte">hStock</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column social-column">
+                        <div class="column-header">Социальные сети</div>
+                        <div class="column-body">
+                            <div class="row-social">
+                                <span><img src="/images/telegram.png" width="25" alt=""></span>
+                                <span><img src="/images/yt.png" width="25" alt=""></span>
+                                <span><img src="/images/shoping-cart.png" width="25" alt=""></span>
+                                <span><img src="/images/dollar.png" width="25" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div><a href="/feedback">Обратная связь</a></div>
+                        <br>
+                        <div><a href="/blog">База знаний</a></div>
+                        <div class="column-body">
+                            <a href="//freekassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/14.png" title="Приём оплаты на сайте картами" style="margin-top: 30px" alt="freekassa"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header" id="header-box">
+        <button class="toggle-button" @click="toggleShowMobile">
+            <i class="category-image"><img src="/images/header/gamburger.svg" alt=""></i>
+        </button>
+        <button class="mobile-search-button"><img src="/images/search-icon_black.png" alt=""></button>
+        <div class="container main-header">
+            <div class="header-logo-wrapper">
+                <a href="https://hstock.org">
+                    <img src="/images/logo_hstock.svg" alt="hstock">
+                </a>
+            </div>
+            <div class="header-middle-wrapper">
+                <div class="header-middle-top d-none d-lg-flex">
+                    <nav class="top-menu">
+                        <a href="/prodavcam" class="top-menu_link">Продавцам</a>
+                        <a href="https://hstock.org/faq" class="top-menu_link">Помощь</a>
+                        <a href="/o-proekte" class="top-menu_link">О проекте</a>
+                        <a href="/blog" class="top-menu_link">Блог</a>
+                                                                            <a href="https://hstock.org/profile" class="top-menu_link">Ваш профиль</a>
+                                                            <a href="https://hstock.org/profile/store" class="top-menu_link">Ваш магазин</a>
+                                                                                    <a href="https://hstock.org/logout" class="top-menu_link">Выход</a>
+
+                                            </nav>
+                </div>
+                <div class="header-middle-bottom">
+                    <div class="header-middle-search">
+                        <form class="form-search" action="https://hstock.org/search" method="get">
+                            <input type="text" class="header-search-box" name="s" placeholder="Поиск по сайту">
+                            <button class="header-search-btn"><i class="help-icon-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header-middle-rigth_wrapper">
+                        <div class="header-middle-profile_store">
+                                                                                                  
+                                        <div class="profile-store_icon">
+                                            <a href="/profile/store">
+                                                <img src="/images/header/profile-store.svg" alt="профиль магазина">
+                                            </a>
+                                        </div>
+                                        <div class="profile-store_info">
+                                            <div class="profile-store_info__rank">
+                                                                                                    <img src="/images/profile/stores/norank.png" height="20px"
+                                                         width="14px" alt="ранг магазина">
+                                                                                                <span class="profile-store_info__rank-text">
+                                                <span class="h-red-text">0</span> ранг
+                                            </span>
+                                            </div>
+                                            <div class="profile-store_info__walet">
+                                                <img src="/images/header/wallet.svg" alt="Баланс магазина">
+                                                <span class="profile-store_info__walet-text">
+                                                    454,92 руб.
+                                                </span>
+                                            </div>
+                                        </div>
+                                                                                                                        </div>
+                        <div class="header-middle-profile_user">
+                                                            <div class="profile-user_icon">
+                                    <a href="/profile">
+                                        <img src="/images/header/profile-user.svg" alt="профиль пользователя">
+                                    </a>
+                                </div>
+                                <div class="profile-user_info">
+                                    <div class="profile-user_info__favorite">
+                                        <img src="/images/header/favorite.svg" alt="Избранные товары">
+                                        <span class="profile-store_info__favorite-text">
+                                        <span class="h-red-text">Избранное</span>
+                                    </span>
+                                    </div>
+                                    <div class="profile-user_info__walet">
+                                        <img src="/images/header/wallet.svg" alt="Баланс пользователя">
+                                        <balance balanceprop="4.39"
+                                                 user_role="1"
+                                                 store_balance="454.92"
+                                                 balance_service="0.00"
+                                                 user_id="36801"
+                                        ></balance>
+                                    </div>
+                                </div>
+                                                    </div>
+                                                    <notification-and-disput></notification-and-disput>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="main-panel">
+        <div class="row">
+            <div class="breadcrumbs-top">
+                <ol class="breadcrumb">
+        
+                            <li class="breadcrumb-item"><a href="https://hstock.org">Главная</a></li>
+            
+        
+                            <li class="breadcrumb-item active">AccStore</li>
+            
+            </ol>
+
+                            </div>
+                <div class="main">
+        <section class="top-section detail-section store-detail">
+                            <store-edit
+                    storeprop="{&quot;id&quot;:1146,&quot;name&quot;:&quot;AccStore&quot;,&quot;slug&quot;:&quot;accstore-134d0f88&quot;,&quot;url&quot;:&quot;https:\/\/hstock.org\/store\/accstore-134d0f88&quot;,&quot;logo&quot;:&quot;stores\/1146\/4674be1b-d23a-404b-bb9a-dc1487caffd8.png&quot;,&quot;more_photos&quot;:null,&quot;description&quot;:&quot;&lt;blockquote&gt;&lt;strong&gt;Магазин почтовых аккаунтов&lt;\/strong&gt;&lt;\/blockquote&gt;&quot;,&quot;rules&quot;:&quot;&lt;p&gt;&lt;strong&gt;1.&lt;\/strong&gt;&amp;nbsp;&lt;strong&gt;Проверка товара&lt;\/strong&gt;&amp;nbsp;производится в течение 30 минут после покупки. По истечении этого&lt;\/p&gt;&lt;p&gt;времени товар обмену не подлежит. Если вам попался не рабочий аккаунт, подайте заявку в&lt;\/p&gt;&lt;p&gt;тех. поддержку. Пример заявки: эл. почта, указанная при покупке; время покупки; какие использовались&lt;\/p&gt;&lt;p&gt;прокси, софт. Время рассмотрения заявки: от 10 минут до 12 часов.&lt;\/p&gt;&lt;p&gt;&lt;strong&gt;2.&lt;\/strong&gt;&amp;nbsp;&lt;strong&gt;Используйте аккаунты, по возможности, сразу же после покупки&lt;\/strong&gt;. &lt;\/p&gt;&lt;p&gt;Причина подобных действий: закрытие многими службами аккаунтов за бездействие, плановые чистки&lt;\/p&gt;&lt;p&gt;мультиаккаунтов и прочие действия. Поэтому не покупайте аккаунты впрок.&lt;\/p&gt;&lt;p&gt;Приобретайте то количество, которое вы сможете обработать (использовать) в&lt;\/p&gt;&lt;p&gt;ближайшее время. &lt;\/p&gt;&lt;p&gt;&lt;strong&gt;3.&lt;\/strong&gt;&amp;nbsp;При авторизации в 2-х и более аккаунтах используйте&amp;nbsp;&lt;strong&gt;разные устройства и прокси&lt;\/strong&gt;&lt;span class=\&quot;ql-cursor\&quot;&gt;﻿﻿﻿﻿﻿﻿﻿&lt;\/span&gt;&lt;\/p&gt;&quot;,&quot;balance&quot;:&quot;1922.10&quot;,&quot;deposit&quot;:&quot;12222.22&quot;,&quot;rank&quot;:3,&quot;balance_service&quot;:&quot;0.00&quot;,&quot;price_min&quot;:&quot;0.00&quot;,&quot;price_max&quot;:&quot;0.00&quot;,&quot;sort&quot;:500,&quot;active&quot;:1,&quot;moderated&quot;:1,&quot;rating&quot;:&quot;0.00&quot;,&quot;phone&quot;:null,&quot;more_phones&quot;:null,&quot;messengers&quot;:&quot;&lt;p&gt;alexpf87@yandex.ru&lt;\/p&gt;&quot;,&quot;address&quot;:null,&quot;email&quot;:&quot;alexpf87@yandex.ru&quot;,&quot;telegram&quot;:null,&quot;user_id&quot;:30077,&quot;created_at&quot;:&quot;2021-04-29 16:22:16&quot;,&quot;updated_at&quot;:&quot;2021-11-15 07:10:03&quot;,&quot;html&quot;:&quot;&quot;,&quot;data&quot;:&quot;{\&quot;uploads\&quot;: []}&quot;,&quot;banned_at&quot;:null,&quot;comment&quot;:null,&quot;comment_date_at&quot;:null,&quot;confirm_request_money&quot;:1,&quot;next_moderate&quot;:null}"
+                    rating="5"
+                    commentstr="2 отзыва"
+                ></store-edit>
+                    </section>
+                    <section class="store-deposit">
+                <div class="store-deposit-name">
+                    Магазин AccStore имеет депозит в размере
+                    <span class="store-deposit-summ">
+                        12222.22 руб.
+
+                        <span class="store-deposiit-faq">
+                            Если у вас возникнет спорная ситуация с продавцом, по которой вы не придете
+                            к обоюдному соглашению, то администрация вынесет свое решение в пользу отказа или возврата средств покупателю.
+                            Тем самым магазин показывает насколько он уверен в своих товарах и готов отвечать за них материально.
+                        </span>
+                    </span>
+                </div>
+                
+
+
+
+
+
+
+
+            </section>
+                <section>
+            <last-add-products-store
+                store_id="1146"
+                store_slug="accstore-134d0f88"
+                user_id="36801"
+                store_rating="5"
+            >
+            </last-add-products-store>
+        </section>
+        <section class="comment-section">
+            <comments summ_rating="0.00"
+                      store_id="1146"
+                      show_form="1"
+                      buy_user=""
+                      user_id="36801">
+            </comments>
+        </section>
+    </div>
+        </div>
+    </div>
+    <footer>
+
+        <div class="footer-top">
+            <div class="footer-opacity"></div>
+            <div class="main">
+                <div class="footer-columns">
+                    <div class="column">
+                        <div class="column-header" :class="{opened: isOpennedFooter('1')}" @click="toggleOpenFooter('1')">
+                            Покупателям
+                            <span class="mobile-show-footer-title"><img src="/images/footer-show-title.svg" alt=""></span>
+                            <span class="mobile-hide-footer-title"><img src="/images/footer-hide-title.svg" alt=""></span>
+                        </div>
+                        <div class="column-body">
+                            <ul>
+                                <li><a href="/kak-vybrat-tovar">Как выбрать товар</a></li>
+                                <li><a href="/kak-vybrat-tovar">Помощь по сервису</a></li>
+                                <li><a href="/faq/customer">F.A.Q</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="column-header" :class="{opened: isOpennedFooter('2')}" @click="toggleOpenFooter('2')">
+                            Продавцам
+                            <span class="mobile-show-footer-title"><img src="/images/footer-show-title.svg" alt=""></span>
+                            <span class="mobile-hide-footer-title"><img src="/images/footer-hide-title.svg" alt=""></span>
+                        </div>
+                        <div class="column-body">
+                            <ul>
+                                <li><a href="/prodavcam">Заработай на своих товарах</a></li>
+                                <li><a href="/request_store_add">Подключение магазина</a></li>
+                                <li><a href="/pomoshch-dlya-magazina">Помощь по магазину</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="column-header" :class="{opened: isOpennedFooter('3')}" @click="toggleOpenFooter('3')">
+                            О проекте
+                            <span class="mobile-show-footer-title"><img src="/images/footer-show-title.svg" alt=""></span>
+                            <span class="mobile-hide-footer-title"><img src="/images/footer-hide-title.svg" alt=""></span>
+                        </div>
+                        <div class="column-body">
+                            <ul>
+                                <li><a href="/o-proekte">hStock</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column social-column">
+                        <div class="column-header">Социальные сети</div>
+                        <div class="column-body">
+                            <div class="row-social">
+                                <span><img src="/images/telegram.png" width="25" alt=""></span>
+                                <span><img src="/images/yt.png" width="25" alt=""></span>
+                                <span><img src="/images/shoping-cart.png" width="25" alt=""></span>
+                                <span><img src="/images/dollar.png" width="25" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div><a href="/feedback">Обратная связь</a></div>
+                        <br>
+                        <div><a href="/blog">База знаний</a></div>
+                        <div class="column-body">
+                            <a href="//freekassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/14.png" title="Приём оплаты на сайте картами" style="margin-top: 30px" alt="freekassa"></a>
+                        </div>
+                    </div>
+                    <div>
+    <div class="soc-img">
+        <a href="tg://resolve?domain=hStock_org" target="_blank"><img src="/images/telegram.png?v=1" alt="tg" class="tg"></a>
+        <a href="tg://resolve?domain=hstockchat" target="_blank"><img src="/images/tlchat.svg" width="40" height="40" alt="tg" class="tg"></a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="wrapper">
+                <p><a href="/polzovatelskoe-soglashenie">Пользовательское соглашение</a></p>
+                <p class="cpoyright">2021  hStock</p>
+            </div>
+        </div>
+
+    </footer>
+</div>
+
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(56381029, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157303583-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-157303583-1');
+</script>
+
+<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+<script src="https://hstock.org/js/jquery.min.js"></script>
+<script src="https://hstock.org/js/bootstrap.min.js"></script>
+<script src="https://hstock.org/js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+<script src="/js/app.js?id=601891ea973740a79b5e"></script>
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=b7be016ccc131fe0337f7e8ac5090c50" charset="UTF-8" async></script>
+</body>
+</html>
